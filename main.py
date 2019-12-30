@@ -1,5 +1,6 @@
 import os.path
 import io
+import datatime
 #----------------------------------------------------
 def find_entries(input_file,i):
     
@@ -18,10 +19,10 @@ def find_entries(input_file,i):
     
 #----------------------------------------------------
 def process():
-    input_file = open("XAUUSD_Monthly.csv","r")
-    for i in range(1,13) :
-        input_file.seek(0)
-        find_entries(input_file,i)
+    input_file = open("XAUUSD.cfd30.csv","r")
+    find_entries(input_file,i)
+    for line in input_file:
+        
 
     input_file.close()
 #----------------------------------------------------
